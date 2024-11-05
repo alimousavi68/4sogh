@@ -38,7 +38,7 @@ $two_post_query = new WP_Query($two_post_query_args);
     </div>
     <style>
       .multi-item {
-        height: 276px;
+        height: 240px;
       }
 
       .single-item-data {
