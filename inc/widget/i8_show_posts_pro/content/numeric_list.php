@@ -18,6 +18,7 @@ $category_posts = new WP_Query(array(
 if ($category_posts->have_posts()) {
     while ($category_posts->have_posts()) {
         $category_posts->the_post();
+        $count = $category_posts->current_post + 1;
         ?>
 
         <li
@@ -25,8 +26,8 @@ if ($category_posts->have_posts()) {
             <article class="numeric-list ">
                 <div class="numeric-list-item d-flex justify-content-start align-items-top ">
                     <div class="list-title-none">
-                        <span class="post-category f14 fw-4">
-                            <?php echo i8_primary_category(get_the_ID()) ?>
+                        <span class="f24 fw-7 ps-1" style="color:var(--i8-primary);">
+                            <?php echo $count; ?>
                         </span>
                         <a href="<?php the_permalink(); ?>"
                             class="<?php echo $title_font_size; ?> <?php echo $title_font_weight; ?> i8-blink">
