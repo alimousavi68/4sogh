@@ -823,7 +823,7 @@ footer {
   z-index: -1;
 }
 .multimdeia-dark-bg .text-title:before {
-    background-color: #004897;
+    background-color: #e1e1e1;
 }
 footer .text-title:before{
   background-color: transparent !important;
