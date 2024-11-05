@@ -708,7 +708,7 @@ textarea {
 }
 
 footer {
-  background-color: var(--i8-light-primary);
+  background-color: var(--i8-dark-bg-color);
 }
 
 .footer-dark * {

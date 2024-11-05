@@ -73,7 +73,7 @@
     <?php endif; ?>
     <style>
         .bottom-menu {
-            background: var(--i8-light-primary);
+            background: var(--i8-dark-bg-color);
             color: white;
         }
 

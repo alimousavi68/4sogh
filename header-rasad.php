@@ -40,7 +40,7 @@
             justify-content: space-between;
             align-items: center;
             align-self: stretch; */
-            background: #1171B7;
+            background: var(--i8-dark-bg-color);
             color: white;
         }
 
