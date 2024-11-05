@@ -10,7 +10,7 @@ if ($hide_title != 'on') {
 ?>
 <style>
   .multi-item {
-    height: 276px;
+    height: 240px;
   }
 
   .single-item-data {
