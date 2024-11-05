@@ -26,7 +26,7 @@ if ($category_posts->have_posts()) {
             <article class="numeric-list ">
                 <div class="numeric-list-item d-flex justify-content-start align-items-top ">
                     <div class="list-title-none">
-                        <span class="f24 fw-7 ps-1" style="color:var(--i8-primary);">
+                        <span class="f24 fw-7 ps-1" style="color:var(--i8-light-primary);">
                             <?php echo $count; ?>
                         </span>
                         <a href="<?php the_permalink(); ?>"
