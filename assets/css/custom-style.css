@@ -642,7 +642,7 @@ a.page-numbers:hover {
 }
 
 .mini-article li::marker {
-  color: var(--i8-dark-primary);
+  color: var(--i8-light-secondary);
   font-size: large;
 
 }
