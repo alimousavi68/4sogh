@@ -178,14 +178,14 @@
 
       // Get the offset position of the navbar
       var sticky = menu.offsetTop;
-      console.log('offset of top:  ' + sticky);
+      // console.log('offset of top:  ' + sticky);
 
       // Add the "sticky" class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position.
       if (window.pageYOffset > sticky) {
-        console.log('widnow width : ' + windowWidth);
+        // console.log('widnow width : ' + windowWidth);
 
         if (windowWidth < 768) {
-          console.log('mobile width : ' + windowWidth);
+          // console.log('mobile width : ' + windowWidth);
           header.classList.add("sticky");
         } else {
           menu.classList.add("sticky");
