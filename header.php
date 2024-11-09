@@ -34,7 +34,7 @@
     }
     ?>">
     <meta property="og:image"
-        content="<?php echo has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/global/no-image.webp'; ?>">
+        content="<?php echo has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/global/no-image.png'; ?>">
     <meta property="og:url" content="<?php echo get_permalink(); ?>">
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
     <meta property="og:type" content="article">
@@ -49,7 +49,7 @@
     }
     ?>">
     <meta name="twitter:image"
-        content="<?php echo has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/global/no-image.webp'; ?>">
+        content="<?php echo has_post_thumbnail() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/images/global/no-image.png'; ?>">
 
     
 
