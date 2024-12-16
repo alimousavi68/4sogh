@@ -56,7 +56,7 @@ class I8_Newspaper_Widget extends WP_Widget
                             <div class="col-12 col-md-24 i8-post-item d-flex flex-column row-gap-2 border-bottom-dashed pb-2">
                                 <div class="i8-post-item-img">
                                     <a href="<?php the_permalink(); ?>" class="image_frame">
-                                        <?php echo i8_the_thumbnail('', 'hover multi-item-thumb w-100 i8-img-fit', '', true, '', false, true); ?>
+                                        <?php echo i8_the_thumbnail('', 'hover multi-item-thumb w-100 i8-img-fit', array("width" => '100%', "height" => 'auto'), true, '', false, true); ?>
                                     </a>
                                 </div>
                                 <div class="i8-post-item-content">
