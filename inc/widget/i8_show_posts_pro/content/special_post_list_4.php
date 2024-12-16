@@ -1,7 +1,7 @@
 <?php
 echo $args['before_widget'];
 
-echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-2">';
+echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 ' . $head_font_size . ' m-0">';
 if ($hide_title != 'on') {
   echo $args['before_title'] . $icon_print . $title . $args['after_title'];
 }
@@ -19,7 +19,7 @@ echo $sub_title_print . '</div>';
 </style>
 
 
-<div class="col-24 col-xl-24  col-lg-24 col-md-24 col-sm-24 multi-items d-flex gap-2">
+<div class="box mt-2 py-4 px-2 col-24 col-xl-24  col-lg-24 col-md-24 col-sm-24 multi-items d-flex gap-2">
   <div class="row row-gap-3">
     <?php
 
@@ -38,7 +38,7 @@ echo $sub_title_print . '</div>';
       while ($category_posts2->have_posts()) {
         $category_posts2->the_post();
         ?>
-        <div class="<?php echo $col; ?> multi-item d-flex flex-column gap-2 <?php echo ( $category_posts2->current_post + 1  == $num ) ? '' : 'border-bottom'; ?>">
+        <div class="<?php echo $col; ?> border-bottom-dashed multi-item d-flex flex-column gap-2 <?php echo ( $category_posts2->current_post + 1  == $num ) ? '' : ''; ?>">
           <a href="<?php the_permalink(); ?>" class="image_frame" >
             <?php echo i8_the_thumbnail('i8-md-219-140', 'hover multi-item-thumb w-100 i8-img-fit', $dimenition = array('width' => 231, 'height' => 140), true, '', false, true); ?>
           </a>

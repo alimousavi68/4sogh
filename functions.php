@@ -5,6 +5,9 @@
  */
 require_once(get_template_directory() . '/inc/functions/active-features.php');
 
+// post type
+require_once(get_template_directory() . '/post-type/i8-newspaper.php');
+
 /**
  * Add Sidebar to theme
  */
@@ -15,6 +18,7 @@ require_once(get_template_directory() . '/inc/functions/sidebar.php');
  * 
  */
 require_once(get_template_directory() . '/inc/widget/i8_show_posts_pro/i8_show_posts_pro.php');
+require_once(get_template_directory() . '/inc/widget/i8-newspaper/index.php');
 require_once(get_template_directory() . '/inc/widget/i8_show_ads_pro/i8_show_ads_pro.php');
 require_once(get_template_directory() . '/inc/widget/i8_show_posts_two_col.php');
 require_once(get_template_directory() . '/inc/widget/i8_site_info_box.php');

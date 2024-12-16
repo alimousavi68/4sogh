@@ -28,7 +28,7 @@
             $sponsored_posts->the_post();
     ?>
             <div class="mini-article d-flex col-md-8 col-sm-24 mb-3">
-                <a href="<?php the_permalink(); ?>" class="image_frame"><?php echo i8_the_thumbnail('i8-sm-130-88', 'ms-2 hover'); ?></a>
+                <a href="<?php the_permalink(); ?>" class=""><?php echo i8_the_thumbnail('i8-sm-130-88', 'ms-2 hover'); ?></a>
                 <a class="text-grey i8-blink" href="<?php echo the_permalink(); ?>" class="f15 me-2 l22-05"><?php echo get_the_title(); ?></a>
             </div>
     <?php

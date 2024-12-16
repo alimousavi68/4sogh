@@ -138,7 +138,7 @@ class i8_market_data_btn_box extends WP_Widget
         echo $args['before_widget'];
 
         if ($hide_title != 'on') {
-            echo '<div class="text-title box-title display-4">';
+            echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5">';
             echo $args['before_title'] . $title  .  $args['after_title'];
             echo $sub_title_print . '</div>';
         }

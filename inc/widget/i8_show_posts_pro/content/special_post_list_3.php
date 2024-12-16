@@ -1,7 +1,7 @@
 <?php
 echo $args['before_widget'];
 
-echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-2">';
+echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5  ' . $head_font_size . ' fw-7 m-0 me-2">';
 if ($hide_title != 'on') {
   echo $args['before_title'] . $icon_print . $title . $args['after_title'];
 }
@@ -41,7 +41,7 @@ echo $sub_title_print . '</div>';
         <div
           class="multi-item d-flex flex-column gap-2 px-1 px-xl-3 px-lg-3 px-md-3  <?php echo ($category_posts->current_post + 1 == $category_posts->post_count) ? '' : 'border-bottom'; ?>">
           <a href="<?php the_permalink(); ?>" class="image_frame">
-            <?php echo i8_the_thumbnail('i8-lg-290-163', 'hover multi-item-thumb w-100 i8-img-fit', $dimenition = array('width' => $thumb_width, 'height' => $thumb_height), true, '', false, true); ?>
+            <?php echo i8_the_thumbnail('i8-290-222', 'hover multi-item-thumb w-100 i8-img-fit', $dimenition = array('width' => $thumb_width, 'height' => $thumb_height), true, '', false, true); ?>
           </a>
           <div class="single-item-data d-flex flex-column gap-1 justify-content-between">
             <div class="title-box">

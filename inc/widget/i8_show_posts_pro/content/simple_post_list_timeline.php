@@ -1,7 +1,7 @@
 <?php
 echo $args['before_widget'];
 
-echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
+echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5  ' . $head_font_size . ' fw-7 m-0">';
 if ($hide_title != 'on') {
     // echo $args['before_title'] . $title . $args['after_title'];
     echo $args['before_title'] . $icon_print . $title . $args['after_title'];
@@ -49,7 +49,7 @@ echo $sub_title_print . '</div>';
         border-image: linear-gradient(to bottom, rgba(229, 229, 229, 1) 60%, rgba(229, 229, 229, 0)) 1 100%;
     }
 </style>
-<div class="timeline_list pe-3 pe-lg-4 pe-xl-4 pe-md-4 ">
+<div class="timeline_list pe-3 pe-lg-4 pe-xl-4 pe-md-4 box mt-2 py-4 px-2">
     <?php
     // نمایش محتویات ویجت- نمایش پست ها
     $category_posts = new WP_Query(

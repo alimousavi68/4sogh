@@ -22,6 +22,7 @@ class i8_show_posts_pro extends WP_Widget
         'نمایش به صورت گالری ۲' => 'mod12',
         'نمایش به صورت تایم لاین' => 'mod13',
         'نمایش به صورت عکس و متن زیر هم ' => 'mod14',
+        'باکس ویژه چارسوق' => 'mod15',
 
 
     );
@@ -288,6 +289,13 @@ class i8_show_posts_pro extends WP_Widget
                 require('content/special_post_list_4.php');
             } elseif ((!wp_is_mobile() && $show_desktop == 'on')) {
                 require('content/special_post_list_4.php');
+            }
+        }
+        elseif ($display_style == $values[14]) {
+            if ((wp_is_mobile() && $show_mobile == 'on')) {
+                require('content/4sogh_box.php');
+            } elseif ((!wp_is_mobile() && $show_desktop == 'on')) {
+                require('content/4sogh_box.php');
             }
         }
     }

@@ -235,7 +235,7 @@ class i8_site_info_box extends WP_Widget
         echo $args['before_widget'];
 
         if ($hide_title != 'on') {
-            echo '<div class="text-title box-title display-4">';
+            echo '<div class="fs-6 py-2 px-3 fw-3 display-6 text-center">';
             echo $args['before_title'] . $icon_print . $title  .  $args['after_title'];
             echo $sub_title_print . '</div>';
         }

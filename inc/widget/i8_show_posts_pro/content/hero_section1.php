@@ -2,7 +2,7 @@
 echo $args['before_widget'];
 
 if ($hide_title != 'on') {
-  echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
+  echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
   echo $args['before_title'] . $icon_print . $title . $args['after_title'];
   echo $sub_title_print . '</div>';
 }
@@ -29,7 +29,7 @@ $category_posts = new WP_Query(
   )
 );
 ?>
-<div class="d-flex flex-column gap-1 pe-xl-0 pe-lg-0 px-0">
+<div class="d-flex flex-column gap-1 pe-xl-0 pe-lg-0 px-0 box mt-2 py-4 px-2">
 
   <!-- End post number 1 - big post -->
   <div class="row  pb-3 ">
@@ -61,7 +61,7 @@ $category_posts = new WP_Query(
           </div>
           <div class="col-xl-15 col-lg-15 col-md-15 col-sm-12 col-24 px-0 px-xl-2 px-sm-2 px-lg-2">
             <a href="<?php the_permalink(); ?>" class="image_frame">
-              <?php echo i8_the_thumbnail('i8-xl-430-242', 'hover w-100 object-fit-cover i8-h-md-100', $size = array('width' => 430, 'height' => 242), true, 'max-height:255px;', false, true); ?>
+              <?php echo i8_the_thumbnail('i8-500-280', 'hover w-100 object-fit-cover i8-h-md-100', $size = array('width' => 430, 'height' => 242), true, 'max-height:255px;', false, true); ?>
             </a>
           </div>
         </div>
@@ -88,7 +88,7 @@ $category_posts = new WP_Query(
           ?>
           <div class="d-flex flex-column flex-md-column flex-sm-row gap-2 multi-item">
             <a href="<?php the_permalink(); ?>" class="image_frame_2">
-              <?php echo i8_the_thumbnail('i8-lg-290-163', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => 222, 'height' => 130), true, '', false, true); ?>
+              <?php echo i8_the_thumbnail('i8-290-222', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => 222, 'height' => 130), true, '', false, true); ?>
             </a>
             <div class="d-flex flex-column gap-0 justify-content-between">
               <div class="title-box">
@@ -138,7 +138,7 @@ $category_posts = new WP_Query(
         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex flex-column gap-2 px-2 px-xl-2 px-lg-2 <?php echo $even_odd_items_padding_in_wraped_mode; ?>">
 
           <a href="<?php the_permalink(); ?>" class="image_frame_2">
-            <?php echo i8_the_thumbnail('i8-lg-290-163', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => 222, 'height' => 130), true, '', false, true); ?>
+            <?php echo i8_the_thumbnail('i8-290-222', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => 222, 'height' => 130), true, '', false, true); ?>
           </a>
 
           <div class="d-flex flex-column gap-0 justify-content-between">

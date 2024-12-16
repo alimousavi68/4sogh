@@ -1,7 +1,7 @@
 <?php
 echo $args['before_widget'];
 
-echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
+echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
 if ($hide_title != 'on') {
   // echo $args['before_title'] . $title . $args['after_title'];
   echo $args['before_title'] . $icon_print . $title . $args['after_title'];
@@ -28,7 +28,7 @@ if ($category_posts->have_posts()) {
       <div
         class="news-card col-xl-13 col-md-13 col-sm-24 text-xl-end text-lg-end text-md-end text-sm-center d-flex flex-column row-gap-2 image_frame px-1 px-xl-3 px-lg-3 px-md-3 ">
         <a href="<?php the_permalink(); ?>" class="image_frame">
-          <?php echo i8_the_thumbnail('i8-xl-430-242', 'single-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => $thumb_width, 'height' => $thumb_height), true, '', false, true); ?>
+          <?php echo i8_the_thumbnail('i8-500-280', 'single-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => $thumb_width, 'height' => $thumb_height), true, '', false, true); ?>
         </a>
         <h2 class="post-title display-3 fw-7 l1">
           <a href="<?php echo get_the_permalink(); ?>" class="i8-blink">

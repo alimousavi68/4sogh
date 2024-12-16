@@ -91,7 +91,7 @@ get_header();
         }
     }
 </style>
-<div class="container mt-4">
+<div class="container mt-4 px-0">
     <div class="row mx-0">
         <?php get_template_part('template-parts/content/content-404'); ?>
     </div>

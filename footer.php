@@ -2,49 +2,49 @@
 //footer
 ?>
 <!-- footer -->
-<footer id="footer" class="footer-dark">
+<footer id="footer" class="">
 
-
-  <div class="container">
-    <?php if (is_active_sidebar('fr-sidebar') || is_active_sidebar('fc-sidebar') || is_active_sidebar('fl-sidebar')): ?>
-      <div class="row border-bottom py-3">
-        <div
-          class="align-items-center align-items-xl-start col-md-12 col-sm-24 col-xl-5 d-flex flex-column justify-content-center justify-content-lg-start ">
-          <?php
-          dynamic_sidebar('fr-sidebar');
-          ?>
-        </div>
-
-        <div class="col-24 col-lg-14 col-md-14 col-md-24 col-sm-24 col-xl-14 d-flex flex-row gap-3">
-          <div class="row w-100">
-            <?php
-            dynamic_sidebar('fc-sidebar');
-            ?>
-          </div>
-        </div>
-
-        <div
-          class="col-lg-5 col-md-12 col-md-5 col-sm-24 col-xl-5 d-flex justify-content-center justify-content-lg-end order-md-2">
-          <?php
-          dynamic_sidebar('fl-sidebar');
-          ?>
-        </div>
-
+  <div class="container  d-flex  bg-secondary cornner-bottom p-4 i8-header flex-column flex-md-row row-gap-2">
+    <div class="col-18 col-24 col-md-18 h-right row row-gap-3 row-gap-md-0">
+      <div class="align-items-center col-24 col-md-5 d-flex h-logo m-0 px-3 justify-content-center justify-content-md-start">
+        <!-- Logo -->
+        <a href="<?php echo bloginfo('url') ?>" title="<?php bloginfo('title'); ?> " class="logo">
+          <img width="153" height="73" class="header-logo"
+            src="<?php echo get_stylesheet_directory_uri(); ?>/images/global/logo.png" alt="logo" />
+        </a>
+        <!-- End Logo -->
       </div>
-    <?php endif; ?>
+
+      <div class="col-auto d-md-flex d-none i8-line-divider"></div>
+
+      <div class="col-18 col-24 col-md-18 d-flex flex-column h-menu justify-content-center row row-gap-2">
+        <div class="">
+          <?php build_custom_menu_by_location('footer'); ?>
+        </div>
+      </div>
+    </div>
+    <div class="align-content-center col-24 col-md-6 d-flex flex-column h-left justify-content-center">
+      <div class="p-2">
+        <?php
+        dynamic_sidebar('fl-sidebar');
+        ?>
+      </div>
+    </div>
   </div>
+
+
 
   <!-- footer menu -->
   <div class="bottom-menu pt-2 pb-5">
 
     <div class="container p-3 ">
-      <div class="row d-flex text-center text-lg-end text-md-end text-sm-center row-gap-3 flex-wrap-reverse">
-        <span class="col-24 col-lg-20 col-md-20 col-sm-24 f13">تمامی حقوق مادی و معنوی این وبسایت متعلق به پایگاه خبری
-          تحلیلی ببین و بخون می باشد و هرگونه کپی برداری با ذکر منبع بلامانع است.</span>
+      <div class="row d-flex text-grey text-center text-lg-end text-md-end text-sm-center row-gap-3 flex-wrap-reverse">
+        <span class="col-24 col-lg-20 col-md-20 col-sm-24 f13">
+          تمامی حقوق مادی و معنوی این وبسایت متعلق به روزنامه چارسوق می باشد و هرگونه کپی برداری با ذکر منبع بلامانع است.</span>
         <div class="col-24 col-lg-4 col-sm-24 col-md-4">
           <div
-            class="d-xl-flex d-lg-flex d-md-flex justify-content-center gap-2 social-links justify-content-center align-items-center">
-            <span class="f13">طراحی و تولید: <a href="https://ihasht.ir/" class="text-white i8-blink" title="هشت بهشت"
+            class="d-xl-flex d-lg-flex d-md-flex text-grey justify-content-center gap-2 social-links justify-content-center align-items-center">
+            <span class="f13">طراحی: <a href="https://ihasht.ir/" class="text-grey i8-blink" title="هشت بهشت"
                 alt="Website designer: Hasht Behesht professional website design site" target="_blank">هشت بهشت</a>
             </span>
           </div>
@@ -295,7 +295,7 @@
 
   .progress-wrap::after {
     position: absolute;
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="orange" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="crimson" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="crimson" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>');
     text-align: center;
     line-height: 46px;
     font-size: 20px;
@@ -317,7 +317,7 @@
 
   .progress-wrap::before {
     position: absolute;
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="orange" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="grey" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="grey" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/></svg>');
     text-align: center;
     line-height: 46px;
     font-size: 20px;

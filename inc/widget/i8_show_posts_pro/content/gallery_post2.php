@@ -1,7 +1,7 @@
 <?php
 echo $args['before_widget'];
 
-echo '<div class="text-title box-title  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
+echo '<div class="text-title box-title fs-5 bg-secondary cornner-tr py-2 px-3 fw-5  ' . $head_font_size . ' fw-7 m-0 me-lg-2 me-md-2">';
 if ($hide_title != 'on') {
     echo $args['before_title'] . $icon_print . $title  .  $args['after_title'];
 }
@@ -27,7 +27,7 @@ if ($category_posts2->have_posts()) {
     ?>
         <div class='<?php echo $col; ?> px-0 px-xl-2 px-lg-2 px-md-2'>
             <div class="post-flip-box-container" class="image_frame">
-                <?php echo i8_the_thumbnail('i8-lg-290-163', 'post-flip-box-image object-fit-cover' . $thumb_radius, array("width" => 303, "height" => 190)); ?>
+                <?php echo i8_the_thumbnail('i8-290-222', 'post-flip-box-image object-fit-cover' . $thumb_radius, array("width" => 303, "height" => 190)); ?>
 
                 <div class="post-flip-box-link-wrapper">
                     <a href="<?php echo get_the_permalink(); ?>" class="post-flip-box-link i8-blink" aria-label="<?php echo get_the_title(); ?>"></a>

@@ -39,7 +39,7 @@ if ($category_posts->have_posts()) {
         ?>
         <div class="<?php echo $col; ?> col-12 d-flex flex-column gap-2 px-2 px-xl-2 px-lg-2">
             <a href="<?php the_permalink(); ?>" class="image_frame_2">
-                <?php echo i8_the_thumbnail('i8-lg-290-163', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => $thumb_width , 'height' => $thumb_height), true, '', false, true); ?>
+                <?php echo i8_the_thumbnail('i8-290-222', 'multi-item-thumb hover w-100 i8-img-fit', $dimenition = array('width' => $thumb_width , 'height' => $thumb_height), true, '', false, true); ?>
             </a>
             
             <div class="d-flex flex-column gap-1">

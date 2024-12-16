@@ -6,7 +6,7 @@
  */
 function i8_the_thumbnail($size_name, $class = '', $dimension = array("width" => 70, "height" => 70), $default_img = true, $style = '', $lazy_load = true, $decoding_async = false)
 {
-    $default_thumbnail_url = get_template_directory_uri() . '/images/global/no-image.webp';
+    $default_thumbnail_url = get_template_directory_uri() . '/images/global/no-image.png';
     $lazyLoad = ($lazy_load) ? ' loading="lazy" ' : '';
     $decodingAsync = ($decoding_async) ? 'decoding="async"' : '';
 
@@ -171,7 +171,7 @@ function render_primary_category_meta_box($post)
 
     <!-- نوع پست -->
     <?php
-    $array_post_structure = array('video', 'imgae', 'text', 'hot','none-thumbnail');
+    $array_post_structure = array('video', 'imgae', 'text', 'hot', 'none-thumbnail');
     $selected_post_structure = get_post_meta($post->ID, 'i8_post_structure', true);
     $selected_post_structure = ($selected_post_structure == '') ? 'text' : $selected_post_structure;
     ?>
@@ -409,7 +409,7 @@ function build_custom_menu($items, $parent_id = 0)
                 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
                 $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                 if ($url == $item->url) {
-                    $menu .= ' active fw-bold';
+                    $menu .= ' active text-danger fw-bold';
                 }
                 $menu .= '" href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
             }
@@ -461,7 +461,7 @@ function build_custom_menu_by_location($location, $style_type = 'row')
     if ($menu_items) {
         $type_class = ($style_type == 'column') ? 'flex-column' : 'flex-row';
         $gap = ($style_type == 'column') ? 'gap-0' : 'gap-3';
-        echo '<ul class="navbar-nav mb-lg-0 menu-list d-flex  ' . $type_class . ' flex-wrap gap-2  px-0 ' . $gap . ' ">';
+        echo '<ul class="navbar-nav mb-lg-0 menu-list d-flex  justify-content-center justify-content-md-start ' . $type_class . ' flex-wrap gap-3  px-0 ' . $gap . ' ">';
         echo build_custom_menu($menu_items);
         echo '</ul>';
     }
@@ -579,7 +579,7 @@ function i8_mobile_menu($location)
     }
 
     $menu = '';
-    echo '<nav class="i8-h-menu ">
+    echo '<nav class="i8-h-menu d-block d-md-none">
             <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
             <label class="m-menu__toggle" for="menu">
             <?xml version="1.0" encoding="UTF-8"?><svg width="32px" height="32px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--i8-light-fg-color)"><path d="M8 6h12M4 6.01l.01-.011M4 12.01l.01-.011M4 18.01l.01-.011M8 12h12M8 18h12" stroke="var(--i8-light-fg-color )" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -693,8 +693,8 @@ function i8_show_social_icons($width = 16, $height = 16)
     $bale = sanitize_url(get_theme_mod('i8_social_link_bale'));
     $rubika = sanitize_url(get_theme_mod('i8_social_link_rubika'));
     ?>
-    <div class="d-flex">
-        <div class="d-none d-xl-flex d-lg-flex d-md-flex justify-content-center gap-2 social-links ">
+    <div class="d-flex justify-content-end ">
+        <div class="d-lg-flex d-md-flex d-none d-xl-flex gap-lg-4 justify-content-center social-links ">
             <?php if ($twitter): ?>
                 <a class="p-0 p-lg-0 p-sm-1 dark-btn" target="_blank" href="<?php echo $twitter; ?>" alt="twitter share button"
                     aria-label="twitter share button">
@@ -775,7 +775,7 @@ function i8_show_social_icons($width = 16, $height = 16)
                 </a>
 
             <?php endif; ?>
-            <?php if ($eitta): ?>  
+            <?php if ($eitta): ?>
                 <a class="p-0 p-lg-0 p-sm-1 dark-btn" target="_blank" href="<?php echo $eitta; ?>" alt="eitta share button"
                     aria-label="eitta share button">
 
@@ -1049,8 +1049,8 @@ function custom_lightbox_gallery()
 
                     function createCaption(caption) {
                         return `<div class="carousel-caption d-none d-md-block">
-                                                                                                                                    <h4 class="m-0">${caption}</h4>
-                                                                                                                                  </div>`;
+                                                                                                                                                <h4 class="m-0">${caption}</h4>
+                                                                                                                                              </div>`;
                     }
 
                     function createIndicators(img) {
@@ -1064,11 +1064,11 @@ function custom_lightbox_gallery()
 
                         for (i = 0, len = countSlides; i < len; i++) {
                             markup += `
-                                                                                                                                    <button type="button" data-bs-target="#lightboxCarousel"
-                                                                                                                                      data-bs-slide-to="${i}"
-                                                                                                                                      ${i === curIndex ? 'class="active" aria-current="true"' : ""}
-                                                                                                                                      aria-label="Slide ${i + 1}">
-                                                                                                                                    </button>`;
+                                                                                                                                                <button type="button" data-bs-target="#lightboxCarousel"
+                                                                                                                                                  data-bs-slide-to="${i}"
+                                                                                                                                                  ${i === curIndex ? 'class="active" aria-current="true"' : ""}
+                                                                                                                                                  aria-label="Slide ${i + 1}">
+                                                                                                                                                </button>`;
                         }
 
                         return markup;
@@ -1083,10 +1083,10 @@ function custom_lightbox_gallery()
                             const imgAlt = img.getAttribute("alt");
 
                             markup += `
-                                                                                                                                    <div class="carousel-item${currentImgSrc === imgSrc ? " active" : ""}">
-                                                                                                                                      <img class="d-block img-fluid w-100" src=${imgSrc} alt="${imgAlt}">
-                                                                                                                                      ${imgAlt ? createCaption(imgAlt) : ""}
-                                                                                                                                    </div>`;
+                                                                                                                                                <div class="carousel-item${currentImgSrc === imgSrc ? " active" : ""}">
+                                                                                                                                                  <img class="d-block img-fluid w-100" src=${imgSrc} alt="${imgAlt}">
+                                                                                                                                                  ${imgAlt ? createCaption(imgAlt) : ""}
+                                                                                                                                                </div>`;
                         }
 
                         return markup;
@@ -1094,27 +1094,27 @@ function custom_lightbox_gallery()
 
                     function createCarousel(img) {
                         const markup = `
-                                                                                                                                  <!-- Lightbox Carousel -->
-                                                                                                                                  <div id="lightboxCarousel" class="carousel slide carousel-fade" data-bs-ride="true">
-                                                                                                                                    <!-- Indicators/dots -->
-                                                                                                                                    <div class="carousel-indicators">
-                                                                                                                                      ${createIndicators(img)}
-                                                                                                                                    </div>
-                                                                                                                                    <!-- Wrapper for Slides -->
-                                                                                                                                    <div class="carousel-inner justify-content-center mx-auto">
-                                                                                                                                      ${createSlides(img)}
-                                                                                                                                    </div>
-                                                                                                                                    <!-- Controls/icons -->
-                                                                                                                                    <button class="carousel-control-prev" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="prev">
-                                                                                                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                                                                                      <span class="visually-hidden">Previous</span>
-                                                                                                                                    </button>
-                                                                                                                                    <button class="carousel-control-next" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="next">
-                                                                                                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                                                                                      <span class="visually-hidden">Next</span>
-                                                                                                                                    </button>
-                                                                                                                                  </div>
-                                                                                                                                  `;
+                                                                                                                                              <!-- Lightbox Carousel -->
+                                                                                                                                              <div id="lightboxCarousel" class="carousel slide carousel-fade" data-bs-ride="true">
+                                                                                                                                                <!-- Indicators/dots -->
+                                                                                                                                                <div class="carousel-indicators">
+                                                                                                                                                  ${createIndicators(img)}
+                                                                                                                                                </div>
+                                                                                                                                                <!-- Wrapper for Slides -->
+                                                                                                                                                <div class="carousel-inner justify-content-center mx-auto">
+                                                                                                                                                  ${createSlides(img)}
+                                                                                                                                                </div>
+                                                                                                                                                <!-- Controls/icons -->
+                                                                                                                                                <button class="carousel-control-prev" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="prev">
+                                                                                                                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                                                                                                  <span class="visually-hidden">Previous</span>
+                                                                                                                                                </button>
+                                                                                                                                                <button class="carousel-control-next" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="next">
+                                                                                                                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                                                                                                  <span class="visually-hidden">Next</span>
+                                                                                                                                                </button>
+                                                                                                                                              </div>
+                                                                                                                                              `;
 
                         modalBody.innerHTML = markup;
                     }
@@ -1223,17 +1223,17 @@ function insert_related_post_link_in_content($content)
         $ads_pos_3 = null;
 
         if ($paragraphs_count <= 4 && $paragraphs_count >= 1) {
-            $ads_pos_1 = (ceil($paragraphs_count / 2))-1;
+            $ads_pos_1 = (ceil($paragraphs_count / 2)) - 1;
         }
         if ($paragraphs_count <= 8 && $paragraphs_count > 4) {
-            $ads_pos_1 = (ceil(($paragraphs_count / 4)))-1;
-            $ads_pos_2 = (ceil(($paragraphs_count / 2)))-1; 
+            $ads_pos_1 = (ceil(($paragraphs_count / 4))) - 1;
+            $ads_pos_2 = (ceil(($paragraphs_count / 2))) - 1;
         }
-        if ($paragraphs_count > 8 ) {
-            $ads_pos_1 = (ceil($paragraphs_count / 6))-1;
-            $ads_pos_2 = (ceil($paragraphs_count / 4)-1);
-            $ads_pos_3 = (ceil($paragraphs_count / 2))-1;
-            
+        if ($paragraphs_count > 8) {
+            $ads_pos_1 = (ceil($paragraphs_count / 6)) - 1;
+            $ads_pos_2 = (ceil($paragraphs_count / 4) - 1);
+            $ads_pos_3 = (ceil($paragraphs_count / 2)) - 1;
+
         }
         // $ads_pos_1 = ceil($paragraphs_count / 2);
         // $ads_pos_2 = ceil($paragraphs_count / 3);
@@ -1244,13 +1244,13 @@ function insert_related_post_link_in_content($content)
         // لینک اول و دوم را تهیه می‌کنیم
         if ($first_related_post && $ads_pos_1 != null) {
             $first_link = '
-            <div class="inline-related-box d-flex flex-column gap-2 align-items-start py-3">
-                <h4 class="releated-head ">همچنین بخوانید: </h4>
-                <div class="d-flex flex-row gap-3">
+            <div class="align-items-start bg-secondary cornner-tr d-flex flex-row gap-2 inline-related-box p-4 py-3">
+                <span class="releated-head ">همچنین بخوانید: </span>
+                <div class="d-flex flex-row gap-3 fs-6 align-items-center">
                     <a href="' . get_permalink($first_related_post->ID) . '" class="">'
-                . get_the_post_thumbnail($first_related_post, 'i8-sm-100-75', array("width" => 100, "height" => 75)) . '
+                . get_the_post_thumbnail($first_related_post, 'i8-sm-100-75 inline-related-img', array("width" => 75, "height" => 50)) . '
                     </a>
-                    <a href="' . get_permalink($first_related_post->ID) . '" class="border-0" > ' . get_the_title($first_related_post->ID) . '</a>
+                    <a href="' . get_permalink($first_related_post->ID) . '" class="border-0 d-flex" > ' . get_the_title($first_related_post->ID) . '</a>
                 </div>
             </div>';
             ?>
@@ -1261,26 +1261,26 @@ function insert_related_post_link_in_content($content)
         }
         if ($second_related_post && $ads_pos_2 != null) {
             $sec_link = '
-            <div class="inline-related-box d-flex flex-column gap-2 align-items-start py-3">
-                <h4 class="releated-head ">همچنین بخوانید: </h4>
-                <div class="d-flex flex-row gap-3">
+            <div class="align-items-start bg-secondary cornner-tr d-flex flex-row gap-2 inline-related-box p-4 py-3">
+                <span class="releated-head ">همچنین بخوانید: </span>
+                <div class="d-flex flex-row gap-3 fs-6 align-items-center">
                     <a href="' . get_permalink($second_related_post->ID) . '" class="">'
-                . get_the_post_thumbnail($second_related_post, 'i8-sm-100-75', array("width" => 100, "height" => 75)) . '
+                . get_the_post_thumbnail($second_related_post, 'i8-sm-100-75 inline-related-img', array("width" => 75, "height" => 50)) . '
                     </a>
-                    <a href="' . get_permalink($second_related_post->ID) . '" class="border-0" > ' . get_the_title($second_related_post->ID) . '</a>
+                    <a href="' . get_permalink($second_related_post->ID) . '" class="border-0 d-flex" > ' . get_the_title($second_related_post->ID) . '</a>
                 </div>
             </div>';
             $paragraphs[$ads_pos_2] .= $sec_link;
         }
-        if ($third_related_post && $ads_pos_3 != null ) {
+        if ($third_related_post && $ads_pos_3 != null) {
             $third_link = '
-            <div class="inline-related-box d-flex flex-column gap-2 align-items-start py-3">
-                <h4 class="releated-head ">همچنین بخوانید: </h4>
-                <div class="d-flex flex-row gap-3">
+            <div class="align-items-start bg-secondary cornner-tr d-flex flex-row gap-2 inline-related-box p-4 py-3">
+                <span class="releated-head ">همچنین بخوانید: </span>
+                <div class="d-flex flex-row gap-3 fs-6 align-items-center">
                     <a href="' . get_permalink($third_related_post->ID) . '" class="">'
-                . get_the_post_thumbnail($third_related_post, 'i8-sm-100-75', array("width" => 100, "height" => 75)) . '
+                . get_the_post_thumbnail($third_related_post, 'i8-sm-100-75 inline-related-img', array("width" => 75, "height" => 50)) . '
                     </a>
-                    <a href="' . get_permalink($third_related_post->ID) . '" class="border-0" > ' . get_the_title($third_related_post->ID) . '</a>
+                    <a href="' . get_permalink($second_related_post->ID) . '" class="border-0 d-flex" > ' . get_the_title($second_related_post->ID) . '</a>
                 </div>
             </div>';
             $paragraphs[$ads_pos_3] .= $third_link;
@@ -1293,3 +1293,134 @@ function insert_related_post_link_in_content($content)
     return $content;
 }
 add_filter('the_content', 'insert_related_post_link_in_content');
+
+function get_drawattention_hotspots($image_id) {
+    // بررسی صحت ID
+    if (!is_numeric($image_id)) {
+        return 'Invalid Image ID.';
+    }
+
+    // بازیابی متادیتای مربوط به تصویر از جدول پست‌ها
+    $hotspot_meta = get_post_meta($image_id, '_da_hotspots', true);
+
+    if (empty($hotspot_meta)) {
+        return 'No hotspots found for this image.';
+    }
+
+    // آرایه برای ذخیره لینک‌ها و اطلاعات
+    $hotspot_links = array();
+
+    // بررسی وجود hotspots و استخراج لینک‌ها
+    if (is_array($hotspot_meta)) {
+        foreach ($hotspot_meta as $hotspot) {
+            // بررسی اینکه ناحیه دارای یک لینک URL است
+            if (isset($hotspot['action']) && $hotspot['action'] === 'url' && isset($hotspot['action-url-url'])) {
+                $hotspot_links[] = array(
+                    'title' => $hotspot['title'] ?? 'بدون عنوان',
+                    'url' => $hotspot['action-url-url'],
+                    'coordinates' => $hotspot['coordinates'] ?? 'بدون مختصات',
+                );
+            }
+        }
+    }
+
+    return $hotspot_links;
+}
+
+
+
+// مبدل تاریخ میلادی به قمری
+function display_hijri_date_with_format() {
+    // تنظیم منطقه زمانی به تهران
+    date_default_timezone_set('Asia/Tehran');
+
+    // تعریف نام ماه‌های هجری قمری
+    $hijri_month_names = [
+        1 => "محرم",
+        2 => "صفر",
+        3 => "ربیع الاول",
+        4 => "ربیع الثانی",
+        5 => "جمادی الاول",
+        6 => "جمادی الثانی",
+        7 => "رجب",
+        8 => "شعبان",
+        9 => "رمضان",
+        10 => "شوال",
+        11 => "ذی القعده",
+        12 => "ذی الحجه"
+    ];
+
+    // ایجاد تاریخ امروز
+    $date = new DateTime('now', new DateTimeZone('Asia/Tehran'));
+
+    // ایجاد یک تقویم هجری قمری با استفاده از IntlCalendar
+    $intl_calendar = IntlCalendar::createInstance('Asia/Tehran', '@calendar=islamic');
+    $intl_calendar->set($date->format('Y'), $date->format('m') - 1, $date->format('d')); // ماه‌ها از صفر شروع می‌شوند
+
+    // کم کردن یک روز از تاریخ
+    $intl_calendar->add(IntlCalendar::FIELD_DAY_OF_MONTH, -1);
+
+    // استخراج روز، ماه و سال هجری قمری
+    $hijri_day = $intl_calendar->get(IntlCalendar::FIELD_DAY_OF_MONTH);
+    $hijri_month = $intl_calendar->get(IntlCalendar::FIELD_MONTH) + 1; // ماه‌ها از صفر شروع می‌شوند
+    $hijri_year = $intl_calendar->get(IntlCalendar::FIELD_YEAR);
+
+    // تبدیل عدد ماه به نام ماه
+    $hijri_month_name = isset($hijri_month_names[$hijri_month]) ? $hijri_month_names[$hijri_month] : "ماه نامعتبر";
+
+    // نمایش تاریخ با فرمت دلخواه
+    echo $hijri_day . " " . $hijri_month_name . " " . $hijri_year;
+}
+
+
+function get_current_page_url() {
+    // بررسی پروتکل (HTTP یا HTTPS)
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 ? 'https://' : 'http://';
+    
+    // آدرس دامنه
+    $domain = $_SERVER['HTTP_HOST'];
+    
+    // آدرس URI
+    $uri = $_SERVER['REQUEST_URI'];
+    
+    // ترکیب پروتکل، دامنه و URI برای به دست آوردن آدرس کامل
+    return $protocol . $domain . $uri;
+}
+function get_current_page_url_without_query() {
+    // بررسی پروتکل (HTTP یا HTTPS)
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 ? 'https://' : 'http://';
+    
+    // آدرس دامنه
+    $domain = $_SERVER['HTTP_HOST'];
+    
+    // آدرس URI
+    $uri = $_SERVER['REQUEST_URI'];
+
+    // تجزیه URI برای حذف کوئری استرینگ
+    $parsed_url = parse_url($uri);
+    
+    // ترکیب پروتکل، دامنه و مسیر برای به دست آوردن URL بدون کوئری استرینگ
+    return $protocol . $domain . $parsed_url['path'];
+}
+
+function get_specific_segment_from_url($url) {
+    // تجزیه URL
+    $parsed_url = parse_url($url);
+    
+    // استخراج مسیر (path)
+    $path = $parsed_url['path'];
+    
+    // تقسیم مسیر بر اساس /
+    $segments = explode('/', trim($path, '/'));
+    
+    // بررسی اینکه آیا بخش قبلی i8-newspaper است
+    if (isset($segments) && count($segments) >= 2 && $segments[count($segments) - 2] === 'i8-newspaper') {
+        // واکشی بخش آخر (1935735)
+        return end($segments);
+    }
+    
+    // در صورتی که شرایط برآورده نشود
+    return null;
+}
+
+

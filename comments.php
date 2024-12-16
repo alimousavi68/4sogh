@@ -4,10 +4,10 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area box p-4">
 
 
-    <div class="box mb-3">  
+    <div class=" mb-3">  
         <?php
         comment_form(array(
             'comment_notes_before' => '',

@@ -7,7 +7,7 @@ get_header();
 
     .i8-container {
         position: relative;
-        font: 'iransansxv';
+        font: 'Kahroba';
     }
 
     .i8-input {
@@ -19,7 +19,7 @@ get_header();
         outline: none;
         font-size: 18px;
         color: var(--i8-light-primary);
-        font: 'iransansxv';
+        font: 'Kahroba';
     }
 
     ::-webkit-input-placeholder {

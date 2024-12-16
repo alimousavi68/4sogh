@@ -31,8 +31,8 @@ class i8_show_ads_pro extends WP_Widget
         'file_alt'       => '',
         'load_method'    => 'lazy',
         'class'       => '',
-        'width'    => '300',
-        'height'    => '100',
+        'width'    => '',
+        'height'    => '',
         'thumb_radius'   => 'round-0',
     );
 
@@ -104,7 +104,7 @@ class i8_show_ads_pro extends WP_Widget
 
         $instance['file_type']      = sanitize_text_field($new_instance['file_type']);
         $instance['file_src']       = sanitize_text_field($new_instance['file_src']);
-        $instance['link_url']       = sanitize_text_field($new_instance['link_url']);
+        $instance['link_url']       = ($new_instance['link_url']);
         $instance['file_alt']       = sanitize_text_field($new_instance['file_alt']);
         $instance['load_method']    = sanitize_text_field($new_instance['load_method']);
         $instance['class']          = sanitize_text_field($new_instance['class']);
@@ -132,7 +132,7 @@ class i8_show_ads_pro extends WP_Widget
         $anime_class = ($icon_animate) ? 'icon_animate' : '';
         $icon_print = '';
         // $icon_print =  ($cat_icon) ? customizeSVG($cat_icon, $cat_color, $cat_color, 30, 30, $anime_class) : $icon_print;
-        $icon_print =  ($icon)     ? customizeSVG($icon, $cat_color, $cat_color, 30, 30, $anime_class) : $icon_print;
+        $icon_print =  ($icon)     ? customizeSVG($icon, '', '', 30, 30, $anime_class) : $icon_print;
         $icon_print =  (empty($icon) && !empty($icon_img)) ? '<img src="' . $icon_img . '" class="' . $anime_class . '"  />' : $icon_print;
 
         $file_type    = $instance['file_type'];
@@ -141,7 +141,7 @@ class i8_show_ads_pro extends WP_Widget
         $file_alt     = $instance['file_alt'];
         $load_method  = $instance['load_method'];
         $class        = $instance['class'];
-        $width       = $instance['width'];
+        $width        = $instance['width'];
         $height       = $instance['height'];
         $thumb_radius = $instance['thumb_radius'];
 
@@ -154,7 +154,7 @@ class i8_show_ads_pro extends WP_Widget
 ?>
             <a href="<?php echo $link_url; ?>" target="_blank" >
                 <img class="<?php echo ($class)  ?  $class : '';
-                            echo $thumb_radius ?> " src="<?php echo ($file_src) ? $file_src : ''; ?>" alt="<?php echo ($file_alt) ? $file_alt : ''; ?>" width="<?php echo ($width) ? $width : ''; ?>" height="<?php echo ($height) ? $height : ''; ?>" <?php echo ($load_method == 'async') ? ' decoding="async" ' : ' loading="lazy" '; ?> />
+                            echo $thumb_radius ?> " src="<?php echo($file_src) ? $file_src : ''; ?>" alt="<?php echo ($file_alt) ? $file_alt : ''; ?>" width="<?php echo ($width) ? $width : '100%'; ?>" height="<?php echo ($height) ? $height : 'auto'; ?>" <?php echo ($load_method == 'async') ? ' decoding="async" ' : ' loading="lazy" '; ?> />
             </a>
 
         <?php

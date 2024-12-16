@@ -41,17 +41,11 @@ add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes');
 /**
  * define Custom Image size
  */
-add_image_size('i8-xl-430-242', 430 , 242 , true);  //  , 
-add_image_size('i8-lg-290-163', 290 , 163 , true);  //  , 
-add_image_size('i8-md-182-102', 182 , 102 , true);  //  , 
+add_image_size('i8-500-280', 500 , 280 , true);  //  , 
+add_image_size('i8-290-222', 290 , 222 , true);  //  , 
+// add_image_size('i8-md-182-102', 182 , 102 , true);  //  , 
 add_image_size('i8-sm-100-75' , 100 , 75  , true);  //  , 
 
-// add_image_size('i8-xl-632-486', 632, 486, true);
-// add_image_size('i8-xl-632-486', 430 , 242 , true);  // gallery bif post , 
-// add_image_size('i8-lg-464-340', 453 , 255 , true);  // hero big post, special post box, 
-// add_image_size('i8-md-219-140', 220 , 128 , true);  // hero box small items , special list post 2
-// add_image_size('i8-sm-130-88' , 130 , 88  , true);  // sidebar most visitor  
-// add_image_size('i8-xsm-90-75' , 90  , 75  , true);  // sidebar most visitor
 
 
 /**
@@ -102,7 +96,7 @@ function custom_comment_form_defaults($defaults)
     <div class="row row-gap-3 d-flex flex-column-reverse flex-xl-column flex-lg-column">
         <div class="d-flex flex-xxl-row flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column">
             <input class="main-input f13 p-10 w-100 ms-3" type="input" id="comment" name="comment" placeholder="' . __('دیدگاه خود را در مورد این مطلب ثبت کنید', 'theme-text-domain') . '" aria-required="true" />
-            <input class="btn btn-main border-0" name="submit" type="submit" id="submit" class="submit" value="' . esc_attr__('ارسال نظر', 'theme-text-domain') . '" />
+            <input class="btn bg-danger btn-main border-0" name="submit" type="submit" id="submit" class="submit" value="' . esc_attr__('ارسال نظر', 'theme-text-domain') . '" />
             ' . get_comment_id_fields() . '
             ' . wp_nonce_field('comment_form_' . get_the_ID(), '_wpnonce', true, false) . '
         </div><div class="d-flex" id="commenter-info"> ' . implode("\n", $fields) . '</div></div>';
