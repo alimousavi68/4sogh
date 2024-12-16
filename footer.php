@@ -57,34 +57,7 @@
 </footer>
 <?php wp_footer(); ?>
 <!-- footer -->
-<script type="text/javascript" defer>
-  // darkmode
-  const darkModeSwitch = document.querySelector(".dark-mode-switch");
-  const darkModeSwitch1 = document.querySelector(".dark-mode-switch1");
 
-  // بررسی وضعیت دارک مود از LocalStorage
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
-
-  // تنظیم وضعیت اولیه بر اساس وضعیت ذخیره شده
-  document.body.classList.toggle("dark-mode", isDarkMode);
-  darkModeSwitch.classList.toggle("active", isDarkMode);
-  darkModeSwitch1.classList.toggle("active", isDarkMode);
-
-  darkModeSwitch.addEventListener("click", () => {
-    const isActive = darkModeSwitch.classList.toggle("active");
-    document.body.classList.toggle("dark-mode", isActive);
-
-    // ذخیره وضعیت دارک مود در LocalStorage
-    localStorage.setItem("darkMode", isActive);
-  });
-  darkModeSwitch1.addEventListener("click", () => {
-    const isActive = darkModeSwitch1.classList.toggle("active");
-    document.body.classList.toggle("dark-mode", isActive);
-
-    // ذخیره وضعیت دارک مود در LocalStorage
-    localStorage.setItem("darkMode", isActive);
-  });
-</script>
 <?php if (is_singular()): ?>
   <!-- shared button -->
   <script type="text/javascript" defer>
@@ -164,51 +137,6 @@
 
 
 <?php endif; ?>
-
-
-<script type="text/javascript" defer>
-  document.addEventListener('DOMContentLoaded', function () {
-    var mini_logo = document.getElementById("mini-logo");
-    var windowWidth = window.innerWidth;
-
-    window.onscroll = function () {
-      var headerHeight = document.getElementById("header-container").offsetHeight;
-      var header = document.getElementById("header-container");
-      var menu = document.getElementById("i8-main-menu-frame");
-
-      // Get the offset position of the navbar
-      var sticky = menu.offsetTop;
-      // console.log('offset of top:  ' + sticky);
-
-      // Add the "sticky" class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position.
-      if (window.pageYOffset > sticky) {
-        // console.log('widnow width : ' + windowWidth);
-
-        if (windowWidth < 768) {
-          // console.log('mobile width : ' + windowWidth);
-          header.classList.add("sticky");
-        } else {
-          menu.classList.add("sticky");
-          mini_logo.classList.add("i8-show");
-        }
-      }
-
-      if (window.pageYOffset < headerHeight) {
-        if (windowWidth < 768) {
-          header.classList.remove("sticky");
-        } else {
-          menu.classList.remove("sticky");
-          mini_logo.classList.remove("i8-show");
-        }
-      }
-
-      // Calculate the position from right based on the scroll position
-      var positionFromRight = windowWidth - scroll;
-      mini_logo.style.right = positionFromRight + 'px';
-    };
-  });
-
-</script>
 
 <script type="text/javascript" defer>
   document.addEventListener('DOMContentLoaded', function () {
