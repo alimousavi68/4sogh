@@ -1,6 +1,6 @@
 <?php
 // get and set newspaper number ID
-if ($_GET['np-number']) {
+if (isset($_GET['np-number'])) {
     $np_number_post = $_GET['np-number'];
 } elseif (is_single()) {
     $np_number_post = $post->ID;
