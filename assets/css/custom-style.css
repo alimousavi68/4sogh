@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: 'Kahroba';
-  src: url('../font/kahroba/Kahroba.woff2') format('woff2-variations'),
+  src: url('../font/Kahroba/Kahroba.woff2') format('woff2-variations'),
     /* will be the standard and works in Safari now */
-    url('../font/kahroba/Kahroba.woff2') format('woff2');
+    url('../font/Kahroba/Kahroba.woff2') format('woff2');
   /* for the other supporting browsers */
   font-weight: 100 1000;
   font-display: fallback;
