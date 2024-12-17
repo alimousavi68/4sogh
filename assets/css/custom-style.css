@@ -782,6 +782,12 @@ footer {
   margin: 25px auto;
 }
 
+.wpcf7 {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
 .main-linear-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.97%, rgba(214, 42, 62, 0.61) 100%);
 }
