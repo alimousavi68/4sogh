@@ -1,4 +1,4 @@
-<div class="border-bottom box col-6 d-flex flex-column gap-2 p-3 ">
+<div class="border-bottom box col-12 col-lg-12 d-flex flex-column gap-2 p-3 ">
     <div class="px-0">
         <a href="<?php the_permalink(); ?>" class="image_frame">
             <?php echo i8_the_thumbnail('', 'hover object-fit-cover ', $size = array('width' => '100%', 'height' => 'auto'), true, '', false, true) ?>
