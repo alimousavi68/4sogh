@@ -133,88 +133,6 @@
             transition: width 0.5s ease;
         }
 
-        .cornner-tr,
-        .cornner-bottom {
-            position: relative;
-        }
-
-        .cornner-bs {
-            position: relative;
-        }
-
-        .cornner-bs::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            right: -1px;
-            width: 22px;
-            height: 100%;
-            background-color: var(--bs-secondary);
-            clip-path: polygon(100% 0, 100% 100%, 0 100%);
-        }
-
-
-        .cornner-tr::after {
-            content: '';
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            width: 15px;
-            height: 15px;
-            background-color: var(--i8-light-bg-color);
-            clip-path: polygon(0 0, 100% 0, 100% 100%);
-        }
-
-        .cornner-bottom::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            right: -1px;
-            width: 15px;
-            height: 15px;
-            background-color: var(--i8-light-bg-color);
-            clip-path: polygon(100% 0, 100% 100%, 0 100%);
-        }
-
-
-        .cornner-br {
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-        }
-
-        span.i8-bullet-rec {
-            position: relative;
-            padding-right: 20px;
-            display: flex;
-            justify-items: center;
-            align-items: center;
-            font-size: 11px;
-            color: var(--i8-light-secondary);
-        }
-
-        .i8-bullet-rec:before {
-            content: '';
-            width: 7px;
-            height: 7px;
-            position: absolute;
-            background-color: var(--bs-danger);
-            right: 0;
-        }
-
-        .i8-line-divider {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-
-        .i8-line-divider:before {
-            content: '';
-            width: 1px;
-            height: 50%;
-            position: absolute;
-            background-color: var(--bs-danger);
-        }
     </style>
 
 </head>
@@ -232,7 +150,7 @@
                     </a>
                     <!-- End Logo -->
                 </div>
-                <div class="d-none d-lg-auto i8-line-divider">
+                <div class="d-none i8-line-divider col-auto d-lg-flex">
 
                 </div>
 
