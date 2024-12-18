@@ -14,7 +14,7 @@ if ($hide_title != 'on') {
 
 <div class="widget-body row">
   <div class="col-24 col-lg-17 col-sm-15 row pe-0">
-    <div class="col-24 col-lg-10 d-flex flex-column gap-3  px-0 px-lg-2">
+    <div class="col-24 col-lg-10 d-flex flex-column gap-3 mb-4 mb-lg-0 order-1 order-md-0 px-0 px-lg-2">
       <?php
 
       $category_posts2 = new WP_Query(
