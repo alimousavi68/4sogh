@@ -107,7 +107,7 @@ $multi_post_query = new WP_Query($multi_post_query_args);
     </div>
   </div>
   <!-- باکس ۶ تایی کوچک -->
-  <div class="col-xl-6 col-lg-24 d-flex flex-wrap row-gap-3 column-xl-gap-0 mt-4 mt-xl-0 flex-lg-row flex-md-row flex-sm-row align-content-start">
+  <div class="col-xl-12 col-lg-24 d-flex flex-wrap row-gap-3 column-xl-gap-0 mt-4 mt-xl-0 flex-lg-row flex-md-row flex-sm-row align-content-start">
     <?php
     // The Loop
     if ($multi_post_query->have_posts()) {

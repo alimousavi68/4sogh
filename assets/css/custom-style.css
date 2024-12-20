@@ -42,6 +42,7 @@
   color: var(--i8-light-primary);
 }
 
+
 :root,
 [data-bs-theme=light] {
   --bs-body-color: #373a3d;

@@ -1,7 +1,7 @@
-<div class="border-bottom box col-12 col-lg-12 d-flex flex-column gap-2 p-3 ">
+<div class="border-bottom box col-12 col-lg-6 d-flex flex-column gap-2 p-3 ">
     <div class="px-0">
         <a href="<?php the_permalink(); ?>" class="image_frame">
-            <?php echo i8_the_thumbnail('', 'hover object-fit-cover ', $size = array('width' => '100%', 'height' => 'auto'), true, '', false, true) ?>
+            <?php echo i8_the_thumbnail('i8-290-222', 'hover object-fit-cover ', $size = array('width' => '100%', 'height' => 'auto'), true, '', false, true) ?>
         </a>
     </div>
     <div class="d-flex flex-column gap-3 ">
@@ -10,9 +10,6 @@
                 <?php i8_limit_text(get_the_title(), 250, '...'); ?>
             </a>
         </h4>
-        <p class="text-justify f15">
-            <?php i8_limit_text(get_the_excerpt(), 240, '...'); ?>
-        </p>
     </div>
 
 </div>

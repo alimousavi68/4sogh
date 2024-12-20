@@ -70,6 +70,20 @@ function i8_add_custom_sidebar()
         'after_sidebar'  => '',
         'show_in_rest'   => false,
     ));
+    register_sidebar(array(
+        'name'           => 'سایدبار بالایی - صفحه آرشیو',
+        'id'             => 'at-sidebar',
+        'class'          => 'at-sidebar',
+        'description'    => 'این ساید بار در صفحه آرشیو و در سمت بالا قرار می گیرد.',
+        'before_widget'  => '<div class="widget">',
+        'after_widget'   => '</div>',
+        'before_title'   => '',
+        'after_title'    => '',
+        'before_sidebar' => '',
+        'after_sidebar'  => '',
+        'show_in_rest'   => false,
+    ));
+
 
     //  single left sidebar - ساید بار کناری صفحه نوشته
     register_sidebar(array(

@@ -145,11 +145,11 @@
     <div style="display: flex;flex-direction: row;gap: 9px;">
         <p style="width:50%;">
             <label for="<?php echo $this->get_field_id('thumb_width'); ?>">طول تصویر</label>
-            <input type="number" min="30" name="<?php echo $this->get_field_name('thumb_width'); ?>" id="<?php echo $this->get_field_id('thumb_width'); ?>" value="<?php echo (!empty($thumb_width)) ? $thumb_width : 75; ?>" class="widefat">
+            <input type="number" min="30" name="<?php echo $this->get_field_name('thumb_width'); ?>" id="<?php echo $this->get_field_id('thumb_width'); ?>" value="<?php echo (!empty($thumb_width)) ? $thumb_width : ''; ?>" class="widefat">
         </p>
         <p style="width:50%;">
             <label for="<?php echo $this->get_field_id('thumb_height'); ?>">عرض تصویر</label>
-            <input type="number" min="30" name="<?php echo $this->get_field_name('thumb_height'); ?>" id="<?php echo $this->get_field_id('thumb_height'); ?>" value="<?php echo (!empty($thumb_height)) ? $thumb_height : 75; ?>" class="widefat">
+            <input type="number" min="30" name="<?php echo $this->get_field_name('thumb_height'); ?>" id="<?php echo $this->get_field_id('thumb_height'); ?>" value="<?php echo (!empty($thumb_height)) ? $thumb_height : ''; ?>" class="widefat">
         </p>
     </div>
 
