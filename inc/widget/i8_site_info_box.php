@@ -274,7 +274,7 @@ class i8_site_info_box extends WP_Widget
             <?php endif; ?>
             <?php if ($hide_social_box != 'on'): ?>
                 <div class="site-info-social-links">
-                    <div class="d-flex justify-content-between gap-2 ">
+                    <div class="d-flex justify-content-center gap-3 gap-3 ">
                         <?php if ($social_icon_1 != ''): ?>
                             <a class="p-0 p-lg-0 p-sm-1" href="<?php echo $social_link_1; ?>" alt="social meida channel"
                                 aria-label="twitter channel">
