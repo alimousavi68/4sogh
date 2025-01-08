@@ -10,6 +10,8 @@ $reference_icon = customizeSVG($reference_icon, 'var(--i8-dark-primary)', 'var(-
 $reference_name = (get_post_meta($post->ID, 'hasht-reference-name', true)) ? get_post_meta($post->ID, 'hasht-reference-name', true) : '';
 $reference_link = (get_post_meta($post->ID, 'hasht-reference-link', true)) ? get_post_meta($post->ID, 'hasht-reference-link', true) : '#';
 $author_name = (get_post_meta($post->ID, 'hasht-author-name', true)) ? get_post_meta($post->ID, 'hasht-author-name', true) : '';
+$category_name = (get_post_meta($post->ID, 'hasht_primary_category', true)) ? get_post_meta($post->ID, 'hasht_primary_category', true) : '';
+$category_name = get_catname( $category_name );
 ?>
 <div class="col-md-24 col-sm-24 col-xl-18 d-flex flex-column gap-2 pe-0 ps-0 ps-xl-3 ps-lg-3 ps-md-2 ps-sm-0">
 
@@ -22,7 +24,7 @@ $author_name = (get_post_meta($post->ID, 'hasht-author-name', true)) ? get_post_
 
                 <div class="col-8 pe-0">
                     <div class="bg-secondary cornner-tr p-3">
-                        <span class="primary-post-cat d-flex f32 fw-3">انرژی</span>
+                        <span class="primary-post-cat d-flex flex-wrap f32 fw-3"><?php echo ($category_name!='' ? $category_name : ''); ?></span>
                         <div class="d-flex align-items-center gap-2 border-top border-black pt-2 mt-2 mb-3">
                             <p class="text-gray f11 fw-3  m-0" style="line-height: 100%;padding-top: 5px;">
                                 <?php the_date('H:i - Y/m/d ') ?>
